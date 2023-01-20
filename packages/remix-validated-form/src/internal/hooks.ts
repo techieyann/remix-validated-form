@@ -68,7 +68,7 @@ export const useDefaultValuesFromLoader = ({
     const match = matches
       .reverse()
       .find((match) => match.data && dataKey in match.data);
-    return match?.data[dataKey];
+    return match?.data?.[dataKey];
   }
 
   return null;
